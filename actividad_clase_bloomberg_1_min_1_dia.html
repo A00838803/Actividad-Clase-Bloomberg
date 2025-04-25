@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>actividad_clase_bloomberg_1_min_1_dia.py</title>
+    <style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+</head>
+<body>
+    <h1>actividad_clase_bloomberg_1_min_1_dia.py</h1>
+    <div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Actividad Clase Bloomberg - 1 Min 1 Dia</span>
+
+<span class="sd">Automatically generated by Colab.</span>
+
+<span class="sd">Original file is located at</span>
+<span class="sd">    https://colab.research.google.com/drive/1E4MKiqVPLorv6BprtcnGfbwXJJJxbN6m</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Import required libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">adfuller</span><span class="p">,</span> <span class="n">kpss</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.arima.model</span> <span class="kn">import</span> <span class="n">ARIMA</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.vector_ar.vecm</span> <span class="kn">import</span> <span class="n">coint_johansen</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Upload Excel files</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please upload KO-1Min Excel file&quot;</span><span class="p">)</span>
+<span class="n">ko_upload</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+<span class="n">ko_filename</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ko_upload</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ko_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">ko_filename</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please upload MSFT-1Min Excel file&quot;</span><span class="p">)</span>
+<span class="n">msft_upload</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+<span class="n">msft_filename</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">msft_upload</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">msft_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">msft_filename</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please upload AMZN-1Min Excel file&quot;</span><span class="p">)</span>
+<span class="n">amzn_upload</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+<span class="n">amzn_filename</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">amzn_upload</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">amzn_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">amzn_filename</span><span class="p">)</span>
+
+<span class="c1"># Print available columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">KO DataFrame columns:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">ko_df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MSFT DataFrame columns:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">msft_df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AMZN DataFrame columns:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">amzn_df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+
+<span class="c1"># Ask user for the correct column name</span>
+<span class="n">close_column</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the column name containing closing prices: &quot;</span><span class="p">)</span>
+
+<span class="c1"># Extract closing prices using user-specified column name</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">ko_close</span> <span class="o">=</span> <span class="n">ko_df</span><span class="p">[</span><span class="n">close_column</span><span class="p">]</span>
+    <span class="n">msft_close</span> <span class="o">=</span> <span class="n">msft_df</span><span class="p">[</span><span class="n">close_column</span><span class="p">]</span>
+    <span class="n">amzn_close</span> <span class="o">=</span> <span class="n">amzn_df</span><span class="p">[</span><span class="n">close_column</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Column &#39;</span><span class="si">{</span><span class="n">close_column</span><span class="si">}</span><span class="s2">&#39; not found in one or more DataFrames&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please check the column names and try again&quot;</span><span class="p">)</span>
+    <span class="k">raise</span>
+
+<span class="c1"># Ensure all series have the same length</span>
+<span class="n">min_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ko_close</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">msft_close</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">amzn_close</span><span class="p">))</span>
+<span class="n">ko_close</span> <span class="o">=</span> <span class="n">ko_close</span><span class="p">[:</span><span class="n">min_length</span><span class="p">]</span>
+<span class="n">msft_close</span> <span class="o">=</span> <span class="n">msft_close</span><span class="p">[:</span><span class="n">min_length</span><span class="p">]</span>
+<span class="n">amzn_close</span> <span class="o">=</span> <span class="n">amzn_close</span><span class="p">[:</span><span class="n">min_length</span><span class="p">]</span>
+
+<span class="c1"># Function for unit root tests with interpretation</span>
+<span class="k">def</span> <span class="nf">unit_root_tests</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Unit Root Tests for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ADF Test</span>
+    <span class="n">adf_result</span> <span class="o">=</span> <span class="n">adfuller</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ADF Test:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ADF Statistic: </span><span class="si">{</span><span class="n">adf_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p-value: </span><span class="si">{</span><span class="n">adf_result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Critical Values: </span><span class="si">{</span><span class="n">adf_result</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpretation:&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">adf_result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - p-value &lt; 0.05: Reject null hypothesis - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is stationary&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - p-value &gt;= 0.05: Fail to reject null - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> may be non-stationary&quot;</span><span class="p">)</span>
+
+    <span class="c1"># KPSS Test</span>
+    <span class="n">kpss_result</span> <span class="o">=</span> <span class="n">kpss</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">KPSS Test:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;KPSS Statistic: </span><span class="si">{</span><span class="n">kpss_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p-value: </span><span class="si">{</span><span class="n">kpss_result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Critical Values: </span><span class="si">{</span><span class="n">kpss_result</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpretation:&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">kpss_result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - p-value &lt; 0.05: Reject null hypothesis - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is non-stationary&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - p-value &gt;= 0.05: Fail to reject null - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> may be stationary&quot;</span><span class="p">)</span>
+
+<span class="c1"># Perform unit root tests</span>
+<span class="n">unit_root_tests</span><span class="p">(</span><span class="n">ko_close</span><span class="p">,</span> <span class="s2">&quot;KO&quot;</span><span class="p">)</span>
+<span class="n">unit_root_tests</span><span class="p">(</span><span class="n">msft_close</span><span class="p">,</span> <span class="s2">&quot;MSFT&quot;</span><span class="p">)</span>
+<span class="n">unit_root_tests</span><span class="p">(</span><span class="n">amzn_close</span><span class="p">,</span> <span class="s2">&quot;AMZN&quot;</span><span class="p">)</span>
+
+<span class="c1"># Difference the series if non-stationary</span>
+<span class="n">ko_diff</span> <span class="o">=</span> <span class="n">ko_close</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">msft_diff</span> <span class="o">=</span> <span class="n">msft_close</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">amzn_diff</span> <span class="o">=</span> <span class="n">amzn_close</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Function to find best ARMA model (using ARIMA with d=0)</span>
+<span class="k">def</span> <span class="nf">find_best_arma</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">max_p</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_q</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">best_aic</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">best_order</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_q</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">model</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">aic</span> <span class="o">&lt;</span> <span class="n">best_aic</span><span class="p">:</span>
+                    <span class="n">best_aic</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">aic</span>
+                    <span class="n">best_order</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Best ARMA model for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Order: </span><span class="si">{</span><span class="n">best_order</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AIC: </span><span class="si">{</span><span class="n">best_aic</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpretation:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - p=</span><span class="si">{</span><span class="n">best_order</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">best_order</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> autoregressive term(s)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - q=</span><span class="si">{</span><span class="n">best_order</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">best_order</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2"> moving average term(s)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">best_order</span>
+
+<span class="c1"># Find and fit best ARMA models on differenced series</span>
+<span class="n">ko_order</span> <span class="o">=</span> <span class="n">find_best_arma</span><span class="p">(</span><span class="n">ko_diff</span><span class="p">,</span> <span class="s2">&quot;KO&quot;</span><span class="p">)</span>
+<span class="n">msft_order</span> <span class="o">=</span> <span class="n">find_best_arma</span><span class="p">(</span><span class="n">msft_diff</span><span class="p">,</span> <span class="s2">&quot;MSFT&quot;</span><span class="p">)</span>
+<span class="n">amzn_order</span> <span class="o">=</span> <span class="n">find_best_arma</span><span class="p">(</span><span class="n">amzn_diff</span><span class="p">,</span> <span class="s2">&quot;AMZN&quot;</span><span class="p">)</span>
+
+<span class="c1"># Fit final ARMA models</span>
+<span class="n">ko_model</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">ko_diff</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">ko_order</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">msft_model</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">msft_diff</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">msft_order</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">amzn_model</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">amzn_diff</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">amzn_order</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Cointegration test with interpretation</span>
+<span class="k">def</span> <span class="nf">cointegration_test</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">coint_johansen</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">det_order</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">k_ar_diff</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Johansen Cointegration Test (KO, MSFT, AMZN):&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trace statistic: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Critical values (90%, 95%, 99%): </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">cvt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpretation:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">cvt</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - r = </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: Cointegration exists at 95% confidence level&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Trace statistic (</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">) &gt; 95% critical value (</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">cvt</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - r = </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: No cointegration at 95% confidence level&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Trace statistic (</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">) &lt;= 95% critical value (</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">cvt</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">lr1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">cvt</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusion: KO, MSFT, and AMZN are cointegrated - they share a long-run equilibrium relationship&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusion: No evidence of cointegration among KO, MSFT, and AMZN&quot;</span><span class="p">)</span>
+
+<span class="c1"># Prepare data for cointegration</span>
+<span class="n">coint_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;KO&#39;</span><span class="p">:</span> <span class="n">ko_close</span><span class="p">,</span>
+    <span class="s1">&#39;MSFT&#39;</span><span class="p">:</span> <span class="n">msft_close</span><span class="p">,</span>
+    <span class="s1">&#39;AMZN&#39;</span><span class="p">:</span> <span class="n">amzn_close</span>
+<span class="p">})</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">cointegration_test</span><span class="p">(</span><span class="n">coint_df</span><span class="p">)</span>
+
+<span class="c1"># Forecast next 30 periods</span>
+<span class="n">forecast_steps</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">ko_forecast</span> <span class="o">=</span> <span class="n">ko_model</span><span class="o">.</span><span class="n">forecast</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">forecast_steps</span><span class="p">)</span>
+<span class="n">msft_forecast</span> <span class="o">=</span> <span class="n">msft_model</span><span class="o">.</span><span class="n">forecast</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">forecast_steps</span><span class="p">)</span>
+<span class="n">amzn_forecast</span> <span class="o">=</span> <span class="n">amzn_model</span><span class="o">.</span><span class="n">forecast</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">forecast_steps</span><span class="p">)</span>
+
+<span class="c1"># Create forecast index</span>
+<span class="n">last_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ko_close</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">forecast_index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">last_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">last_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">forecast_steps</span><span class="p">)</span>
+
+<span class="c1"># Plot original series with forecasts</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ko_close</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;KO Historical&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">forecast_index</span><span class="p">,</span> <span class="n">ko_forecast</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;KO Forecast&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">msft_close</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MSFT Historical&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">forecast_index</span><span class="p">,</span> <span class="n">msft_forecast</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MSFT Forecast&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">amzn_close</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;AMZN Historical&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">forecast_index</span><span class="p">,</span> <span class="n">amzn_forecast</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;AMZN Forecast&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;KO, MSFT, and AMZN Closing Prices with Forecasts&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Detailed forecast plot with confidence intervals and interpretation</span>
+<span class="k">def</span> <span class="nf">plot_forecast</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+    <span class="n">forecast_obj</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">steps</span><span class="p">)</span>
+    <span class="n">forecast</span> <span class="o">=</span> <span class="n">forecast_obj</span><span class="o">.</span><span class="n">predicted_mean</span>
+    <span class="n">conf_int</span> <span class="o">=</span> <span class="n">forecast_obj</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+
+    <span class="n">forecast_index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">)</span> <span class="o">+</span> <span class="n">steps</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> Historical&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">forecast_index</span><span class="p">,</span> <span class="n">forecast</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Forecast&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">forecast_index</span><span class="p">,</span>
+                    <span class="n">conf_int</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+                    <span class="n">conf_int</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span>
+                    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;95% Confidence Interval&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> Price Forecast&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="c1"># Forecast interpretation</span>
+    <span class="n">last_value</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">mean_forecast</span> <span class="o">=</span> <span class="n">forecast</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Forecast Interpretation for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Last observed value: </span><span class="si">{</span><span class="n">last_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average forecast value: </span><span class="si">{</span><span class="n">mean_forecast</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Forecast change: </span><span class="si">{</span><span class="n">mean_forecast</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">last_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">mean_forecast</span> <span class="o">&gt;</span> <span class="n">last_value</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trend: Upward forecast trend&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mean_forecast</span> <span class="o">&lt;</span> <span class="n">last_value</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trend: Downward forecast trend&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trend: Flat forecast trend&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;95% CI range at period </span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s2">: [</span><span class="si">{</span><span class="n">conf_int</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">conf_int</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+
+<span class="c1"># Generate detailed forecast plots and interpretations</span>
+<span class="n">plot_forecast</span><span class="p">(</span><span class="n">ko_model</span><span class="p">,</span> <span class="n">ko_diff</span><span class="p">,</span> <span class="s2">&quot;KO&quot;</span><span class="p">)</span>
+<span class="n">plot_forecast</span><span class="p">(</span><span class="n">msft_model</span><span class="p">,</span> <span class="n">msft_diff</span><span class="p">,</span> <span class="s2">&quot;MSFT&quot;</span><span class="p">)</span>
+<span class="n">plot_forecast</span><span class="p">(</span><span class="n">amzn_model</span><span class="p">,</span> <span class="n">amzn_diff</span><span class="p">,</span> <span class="s2">&quot;AMZN&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print forecast values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">KO Forecast Values (next 5 periods):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ko_forecast</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">MSFT Forecast Values (next 5 periods):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">msft_forecast</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">AMZN Forecast Values (next 5 periods):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">amzn_forecast</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</body>
+</html>
